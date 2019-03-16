@@ -22,4 +22,4 @@
 ## License
 All of the source code in this repository is released under the Apache License version 2.0. See `LICENSE`.
 
-**注**：如果代码中数学公式无法现实，可以在chrome中安装插件--`MathJax Plugin for Github`
+**注**：如果代码中数学公式无法显示，可以在chrome中安装插件--`MathJax Plugin for Github`
