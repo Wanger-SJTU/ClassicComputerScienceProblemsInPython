@@ -15,7 +15,7 @@
 # limitations under the License.
 
 
-def calculate_pi(n_terms: int) -> float:
+def calculate_pi_G(n_terms: int) -> float:
     numerator: float = 4.0
     denominator: float = 1.0
     operation: float = 1.0
@@ -25,7 +25,19 @@ def calculate_pi(n_terms: int) -> float:
         denominator += 2.0
         operation *= -1.0
     return pi
-
+    
+def calculate_pi_Ni(n_terms: int) -> float:
+    numerator: float = 4.0
+    denominator: float = 1.0
+    operation: float = 1.0
+    pi: float = 3.0
+    for i in range(1, n_terms+1):
+        denominator = 2*i*(2*i+1)*(2*i+2)
+        pi += operation * (numerator / denominator)
+        denominator += 2.0
+        operation *= -1.0
+    return pi
 
 if __name__ == "__main__":
-    print(calculate_pi(1000000))
+    print(calculate_pi_G(1000000))
+    print(calculate_pi_Ni(1000000))
